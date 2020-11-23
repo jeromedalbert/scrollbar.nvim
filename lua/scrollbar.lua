@@ -99,7 +99,7 @@ function M.show(winnr, bufnr)
 
     local excluded_filetypes = option.excluded_filetypes
     local filetype = api.nvim_buf_get_option(bufnr, "filetype")
-    if filetype == "" or vim.tbl_contains(excluded_filetypes, filetype) then
+    if vim.tbl_contains(excluded_filetypes, filetype) then
         return
     end
 
